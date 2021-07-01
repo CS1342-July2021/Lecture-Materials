@@ -1,0 +1,7 @@
+Exam1
+Program2/
+.vscode/
+*.out
+*.DS_Store
+highlight.cpp
+*/program*
