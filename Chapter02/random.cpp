@@ -1,12 +1,12 @@
+#include <cstdlib>  // rand & srand
+#include <ctime>    // time
 #include <iostream>
-#include <cstdlib> // rand & srand
-#include <ctime> // time
 
 using namespace std;
 
 int main() {
   srand(time(NULL));
-  int random{rand() % 10};
+  int random{rand() % 100};
 
   cout << "Random Number: " << random << endl;
 

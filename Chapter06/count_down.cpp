@@ -3,11 +3,13 @@
 using namespace std;
 
 void countDown(int n) {
-  if (n == 0)
+  // define the base case
+  if (n == 0) {
     cout << "GO!" << endl;
-  else {
-    cout << n << endl;
-    countDown(n - 1);
+  } else {
+    cout << n << " ";
+    n--;  // the work
+    countDown(n);
   }
 }
 

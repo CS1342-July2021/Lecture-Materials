@@ -58,6 +58,7 @@ void Quicksort(int numbers[], int i, int k) {
 
   /* Partition the data within the array. Value j returned
    from partitioning is location of last element in low partition. */
+  // 1 3 2 4 5
   j = Partition(numbers, i, k);
 
   /* Recursively sort low partition (i to j) and

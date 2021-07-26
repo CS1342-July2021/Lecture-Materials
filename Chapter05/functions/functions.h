@@ -5,7 +5,7 @@
 #ifndef FUNCTIONS_FUNCTIONS_H
 #define FUNCTIONS_FUNCTIONS_H
 
-int findLength(const char text[]);
-void reverse(char text[], const int &size);
+int findLength(const char[]);
+void reverse(char[], const int &);
 
 #endif  // FUNCTIONS_FUNCTIONS_H

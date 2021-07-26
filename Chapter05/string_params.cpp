@@ -2,13 +2,13 @@
 #include <string>
 using namespace std;
 
-// Function replaces spaces with hyphens
-void StrSpaceToHyphen(string& modStr) {
-  unsigned int i;  // Loop index
-
-  for (i = 0; i < modStr.size(); ++i) {
-    if (modStr.at(i) == ' ') {
-      modStr.at(i) = '-';
+// Create a function that changes spaces to hyphens in a string using pass by
+// reference
+// "cat"
+void strToHyphen(string &word) {
+  for (int i = 0; i < word.size(); i++) {
+    if (word.at(i) == ' ') {
+      word.at(i) = '-';
     }
   }
 }
@@ -20,8 +20,8 @@ int main() {
   cout << "Enter string with spaces: " << endl;
   getline(cin, userStr);
 
-  // Call function to modify user defined string
-  StrSpaceToHyphen(userStr);
+  // TODO: Call function to modify user defined string
+  strToHyphen(userStr);
 
   // Output modified string
   cout << "String with hyphens: ";

@@ -3,9 +3,11 @@
 // Implement Factorial
 int factorial(int n) {
   // What is the base case?
-  if (n == 1) return 1;
-  // What is the recursive case?
-  else {
+  if (n == 1) {
+    return 1;
+  } else {
+    // What is the recursive case?
+    // n! = n * (n - 1)!
     return n * factorial(n - 1);
   }
 }

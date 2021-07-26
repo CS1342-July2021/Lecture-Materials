@@ -1,12 +1,12 @@
 #include <fstream>
 #include <iostream>
 #include <sstream>
+#include <vector>
 
 using namespace std;
 
 int main() {
   ifstream inFS;
-  int fileNum;
 
   inFS.open("users.csv");
 
@@ -15,22 +15,21 @@ int main() {
     return 1;
   }
 
+  vector<vector<string>> table;
+
   while (!inFS.eof()) {
+    vector<string> row;
     string line;          // read in every line of text
     getline(inFS, line);  // Tom,Riddle,50
 
     // parse out each line
-    stringstream lineSS(line);
-    string firstName, lastName, age;
-    getline(lineSS, firstName, ',');
-    getline(lineSS, lastName, ',');
-    getline(lineSS, age);
+    stringstream lineSS(line);  // Tom,Riddle,50
+    string token;
+    while (getline(lineSS, token, ',')) {
+      row.push_back(token);
+    }
 
-    // Use firstName, lastName, age...
-    cout << firstName << endl;
-    cout << lastName << endl;
-    cout << age << endl;
-    cout << endl;
+    table.push_back(row);
   }
 
   cout << "Closing file users.txt." << endl;

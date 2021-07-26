@@ -4,7 +4,7 @@ using namespace std;
 
 int main() {
   int number = -4;
-  string result = (number > 0) ? "Positive!" : "Negative!";
+  string result = (number > 0) ? "Positive" : "Negative!";
 
   cout << result << endl;
 

@@ -1,16 +1,22 @@
-int findLength(const char text[]) {
-  int size = 0;
-  while (text[size] != '\0') {
+int findLength(const char word[]) {
+  int size{0};
+  while (word[size] != '\0') {
     size++;
   }
 
   return size;
 }
 
-void reverse(char text[], const int &size) {
+// hello
+// oellh
+// olleh
+// olleh ***
+// oellh
+// hello
+void reverse(char word[], const int &size) {
   for (int i = 0; i < size / 2; i++) {
-    char temp = text[i];
-    text[i] = text[size - 1 - i];
-    text[size - 1 - i] = temp;
+    char temp = word[size - 1 - i];
+    word[size - 1 - i] = word[i];
+    word[i] = temp;
   }
 }

@@ -15,25 +15,31 @@ int main() {
     cout << n << " ";
   }
   cout << endl;
+  int min = numbers.at(0);
+  for (int num : numbers) {
+    if (num < min) {
+      min = num;
+    }
+  }
+
+  return min;
 
   return 0;
 }
 
 void normalize(vector<int> &numbers) {
-  // find min
   int min = findMin(numbers);
 
-  // update numbers with min
-  for (int &num : numbers) {
-    num -= min;
+  for (int &val : numbers) {
+    val -= min;
   }
 }
 
 int findMin(vector<int> &numbers) {
   int min = numbers.at(0);
-  for (int number : numbers) {
-    if (number < min) {
-      min = number;
+  for (int num : numbers) {
+    if (num < min) {
+      min = num;
     }
   }
 

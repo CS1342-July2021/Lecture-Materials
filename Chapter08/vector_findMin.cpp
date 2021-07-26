@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int findMin(vector<int> &numbers);
+int findMin(vector<int> &numbers);  //
 
 int main() {
   vector<int> numbers = {1, 2, 3, 4, 5, 6};
@@ -16,12 +16,11 @@ int main() {
 }
 
 int findMin(vector<int> &numbers) {
-  int min = numbers.at(re0);
-  for (int number : numbers) {
-    if (number < min) {
-      min = number;
+  int min = numbers.at(0);
+  for (int num : numbers) {
+    if (num < min) {
+      min = num;
     }
-    number = 10;
   }
 
   return min;

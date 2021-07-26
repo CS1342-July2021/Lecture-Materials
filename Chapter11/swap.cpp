@@ -4,9 +4,9 @@ using namespace std;
 
 void swap(int *a, int *b) {
   // implement swap
-  int temp = *a;  // temp = 100
-  *a = *b;        // *a = 200
-  *b = temp;      // *b = 100
+  int temp = *a;
+  *a = *b;  // int = int
+  *b = temp;
 }
 
 int main() {

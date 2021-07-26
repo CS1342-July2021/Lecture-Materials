@@ -1,6 +1,7 @@
 #include <cstdlib>
 #include <ctime>
 #include <iostream>
+#include <random>
 
 using namespace std;
 
@@ -19,6 +20,6 @@ int main() {
 }
 
 string headsOrTails() {
-  int value = rand() % 2;
-  return (value == 0) ? "Heads" : "Tails";
+  int randomNumber = rand() % 2;  // 0 - 1
+  return (randomNumber == 0) ? "heads" : "tails";
 }

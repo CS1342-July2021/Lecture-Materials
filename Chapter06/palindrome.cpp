@@ -17,7 +17,7 @@ int main() {
   if (isPalindrome1) {
     cout << example << " is a palindrome" << endl;
   } else {
-    cout << example << " is a not palindrome" << endl;
+    cout << example << " is not a palindrome" << endl;
   }
 
   cout << "\n--Using Recursion--" << endl;
@@ -34,25 +34,24 @@ int main() {
 }
 
 bool palindrome_iterative(char word[], int lowerBound, int upperBound) {
-  bool isPalindrome = true;
-
-  while (lowerBound < upperBound && isPalindrome) {
+  /** implement **/
+  while (upperBound >= lowerBound) {
     if (word[lowerBound] != word[upperBound]) {
-      isPalindrome = false;
+      return false;
     } else {
       lowerBound++;
       upperBound--;
     }
   }
 
-  return isPalindrome;
+  return true;
 }
 
-bool palindrome_recursive(char word[], int &lowerBound, int &upperBound) {
-  if (lowerBound >= upperBound)
-    return true;
-  else if (word[lowerBound] != word[upperBound])
+bool palindrome_recursive(char word[], int lowerBound, int upperBound) {
+  if (word[lowerBound] != word[upperBound])
     return false;
+  else if (upperBound <= lowerBound)
+    return true;
   else
     return palindrome_recursive(word, ++lowerBound, --upperBound);
 }

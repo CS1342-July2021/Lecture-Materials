@@ -8,12 +8,7 @@ using namespace std;
  * */
 
 int main() {
-  int age;
-
-  cout << "Please Enter you age: " << endl;
-  cin >> age;
-
-  cout << "You are " << age << " years old" << endl;
+  /* -- Code goes here -- */
 
   return 0;
 }

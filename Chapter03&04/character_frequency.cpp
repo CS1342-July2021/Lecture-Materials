@@ -14,15 +14,14 @@ int main() {
   // print result
   int totalAlpha{0};
   int totalDigit{0};
-
   int size{0};
+
   while (str[size] != '\0') {
     if (isalpha(str[size])) {
       totalAlpha++;
     } else if (isdigit(str[size])) {
       totalDigit++;
     }
-
     size++;
   }
 

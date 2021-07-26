@@ -25,5 +25,5 @@ int LinearSearch(int array[], int size, int key) {
     }
   }
 
-  return -1;
+  return -1;  // not exist
 }

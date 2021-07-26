@@ -16,7 +16,7 @@ int main() {
   int totalWords = wordCount(myString);
   cout << "\nNumber of words: " << totalWords << endl;
 
-  return 0;
+    return 0;
 }
 
 int wordCount(string str) {

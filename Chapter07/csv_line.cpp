@@ -1,30 +1,32 @@
 #include <iostream>
 #include <sstream>
 #include <string>
+#include <vector>
 
 using namespace std;
 
-void parseValues(string, string[]);
+void parseValues(string, vector<string> &);
 
 int main() {
-  string tester = "Erik;Gabrielsen;egabrielsen@smu.edu";
-  const int size = 3;
-  string values[size];
+  string tester = "Erik,Gabrielsen,egabrielsen@smu.edu";
+
+  vector<string> values;
 
   parseValues(tester, values);
 
-  for (int i = 0; i < size; i++) {
-    cout << i << ": " << values[i] << endl;
+  for (string token : values) {
+    cout << token << endl;
   }
 
   return 0;
 }
 
-void parseValues(string stringToParse, string values[3]) {
+void parseValues(string stringToParse, vector<string> &values) {
+  string word;
   // convert to inSS
-  stringstream inSS(stringToParse);  // Erik;Gabrielsen;egabrielsen@smu.edu
+  istringstream inSS(stringToParse);  // Erik,Gabrielsen,egabrielsen@smu.edu
   // parse values
-  getline(inSS, values[0], ';');  // Erik
-  getline(inSS, values[1], ';');  // Gabrielsen
-  getline(inSS, values[2]);       // egabrielsen@smu.edu
+  while (getline(inSS, word, ',')) {
+    values.push_back(word);
+  }
 }

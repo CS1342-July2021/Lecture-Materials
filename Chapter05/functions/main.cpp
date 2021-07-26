@@ -2,13 +2,18 @@
 
 #include "functions.h"
 
+/**
+ * Create 2 functions
+ * 1. for finding the length of a c-string
+ * 2. to reverse the contents of that c-string
+ */
+
 using namespace std;
 
 int main() {
   char message[] = "Hello World";
-  cout << "Here 1";
+
   int size = findLength(message);
-  cout << "Here 2";
   reverse(message, size);
 
   cout << message << endl;
