@@ -10,7 +10,7 @@ int main() {
 
   cin >> input;
   cin.ignore();
-  cin.clear();
+  cin.clear();  // resets flags
 
   cout << "Enter a string: ";
   getline(cin, text);

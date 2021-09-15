@@ -20,6 +20,7 @@ int main() {
 }
 
 string headsOrTails() {
-  int randomNumber = rand() % 2;  // 0 - 1
-  return (randomNumber == 0) ? "heads" : "tails";
+  // Implement here
+  int random = rand() % 2;  // 0 || 1
+  return (random == 0) ? "heads" : "tails";
 }
