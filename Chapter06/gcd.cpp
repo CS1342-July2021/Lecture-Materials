@@ -5,12 +5,12 @@ using namespace std;
    of two numbers, e.g. GCD(8, 12) = 4
 */
 int GCD(int inNum1, int inNum2) {
-  if (inNum1 == inNum2)
-    return inNum1;
-  else if (inNum1 > inNum2) {
-    return GCD(inNum1 - inNum2, inNum2);
+  if (inNum1 == inNum2) return inNum1;
+
+  if (inNum1 > inNum2) {
+    return GCD(inNum2, inNum1 - inNum2);
   } else {
-    return GCD(inNum2 - inNum1, inNum1);
+    return GCD(inNum1, inNum2 - inNum1);
   }
 }
 
